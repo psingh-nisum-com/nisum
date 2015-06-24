@@ -14,7 +14,7 @@ public final class CSVBuilder {
         List<StringBuilder> csvList=new ArrayList<StringBuilder>();
         Elements trs = table.getElementsByTag("tr");
         for(Element tr:trs){
-            Elements tds =  tr.getElementsByTag("td");
+            Elements tds =  tr.select("th,td");
             int i=0;
             StringBuilder oneRow=new StringBuilder();
             for(Element td:tds){
